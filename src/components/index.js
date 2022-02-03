@@ -1,0 +1,23 @@
+export {default as Header } from "./Header.jsx";
+export {default as Footer } from "./Footer.jsx";
+export {default as Home } from "./Home.jsx";
+export {default as Card } from "./Card.jsx";
+export {default as Hero } from "./Hero.jsx";
+export {default as Explore } from "./Explore.jsx";
+export {default as Bestsellers } from "./Bestsellers.jsx";
+export {default as Newsletter } from "./Newsletter.jsx";
+export {default as ScrollUp } from "./ScrollUp.jsx";
+export {default as Product } from "./Product.jsx";
+export {default as Accordion } from "./Accordion.jsx";
+export {default as Gallery } from "./Gallery.jsx";
+export {default as Cart } from "./Cart.jsx";
+export {default as CartItem } from "./CartItem.jsx";
+export {default as Wishlist } from "./Wishlist.jsx";
+export {default as Profile } from "./Profile.jsx";
+export {default as LogRegister } from "./LogRegister.jsx";
+export {default as Catalog } from "./Catalog.jsx";
+export {default as Contact } from "./Contact.jsx";
+export {default as About } from "./About.jsx";
+export {default as Reviews } from "./Reviews.jsx";
+export {default as Notfound } from "./Notfound.jsx";
+

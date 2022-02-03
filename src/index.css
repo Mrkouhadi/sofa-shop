@@ -1,13 +1,174 @@
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Josefin Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+   min-height: 100vh;
+}
+::selection{
+  color: #dd6060;
+  background-color: transparent;
+}
+/* scrollbar styles */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/* input number located in product component. we need to hide the arrows of the input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+ .fas{
+  transition: all 300ms ease;
+}
+.fas:hover{
+  transform: translateY(-4px);
+}
+.link{
+  transition: all 300ms ease;
+}
+.link:hover{
+  font-weight: 700;
+  transform: translateY(-4px);
+}
+
+/*header responsiveness styling*/
+
+.mobileNav{
+  background-color: #070f1f;
+  color: azure;
+  position: absolute;
+  top:0; right: 0; left: 0;
+  height: 70vh;
+  padding:45px 30px;
+  flex-direction: column;
+  z-index: 10;
+  margin-top: -10px;
+  transform: translateY(0px);
+  opacity: 1;
+  transition: transform 300ms ease, opacity 600ms ease;
+}
+.hiddenNav{
+  opacity: 0;
+  transform: translateY(-600px);
+}
+
+.mobileIcons{
+  position: fixed;
+  bottom:10px; right: 10px; left: 10px;
+  background-color: #070f1f;
+  border-radius: 6px;
+  padding: 15px 30px;
+  z-index: 10;
+  transition: all 300ms ease;
+}
+.mobileIcons i{  color: #a9b3b3 !important; font-size: 40px;}
+.fa-bars{
+  z-index: 11;
+  color: #302a2f;
+}
+.fa-times{
+  color:#e1ebeb;
+}
+
+
+/* slider styles */
+.slider{
+  width: 100%; height:90vh;
+  overflow: hidden;
+}
+.slide{
+  height: 100%; width: 100%; position: absolute; top: 0; right: 0;
+  display: flex; align-items: center; justify-content: space-around; flex-wrap: wrap;
+  overflow: hidden;
+
+  transform: translateX(800px);
+  transition: transform 1000ms ease, opacity 1300ms ease;
+  opacity: 0;
+}
+.nextSlide{
+  transform: translateX(800px);
+  opacity: 0;
+}
+.lastSlide{
+  transform: translateX(-800px);
+  opacity: 0;
+}
+.activeSlide{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* grid explore syles */
+
+.card1, .card2, .card3, .card4{
+  min-height: 210px;
+}
+.card1{
+  background-image: url("/public/assets/images/livingroom.jpg");
+  background-position: center;
+}
+.card2{
+  background-image: url("/public/assets/images/bathroom.jpg");
+  background-position: center;
+}
+.card3{
+  background-image: url("/public/assets/images/kitchen.jpg");
+  background-position: center;
+}
+.card4{
+  background-image: url("/public/assets/images/bedroom.jpg");
+  background-position: center;
+}
+
+/* card of producst */
+.card:hover .btns{
+  opacity: 1;
+}
+
+/* iframe in contact component */
+.contactMap{
+  filter: grayscale(1) contrast(1.2) opacity(0.5);
+}
+/* animation of cards of products */
+.card{
+  opacity: 0;
+  transform: scale(.8);
+  transition: all 500ms ease;
+}
+.card--animated{
+  opacity: 1;
+  transform: scale(1);
 }
