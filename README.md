@@ -1,7 +1,7 @@
-# Getting Started 
-clone the repository.
-run `npm install`
-then run `npm start`
+# Getting Started
+
+After cloning the repository, run:
+`npm install && npm start`
 
 
 ### Some screenshots
