@@ -2,7 +2,7 @@
 
 After cloning the repository, run:
 `npm install && npm start`
-
+<p> Enjoy your coding </p>
 
 ### Some screenshots
 
