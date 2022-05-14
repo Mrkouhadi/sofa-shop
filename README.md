@@ -1,6 +1,6 @@
 # Getting Started
 
-After you clone the project, run:
+After you clone the project, you can run:
 `npm install && npm start`
 <p> Then Enjoy Your Coding </p>
 
